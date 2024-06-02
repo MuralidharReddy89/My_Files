@@ -1,0 +1,97 @@
+
+
+- vi windows-instance-creation.tf
+
+provider "aws"{
+profile="terraform_user"
+access_key="<access key>"
+secret_key="<secret key>"
+region="ap-south-1"
+}
+resource "aws_instance" "example"{
+ami="<win 2019 ami id in ap-south-1 region>"
+instance_type="t2.micro"
+key_name="terraform-windows"
+security_groups=["${aws_security_group.allow_rdp.name}"]
+}
+resource "aws_security_group" "allow_rdp"{
+name="allow_rdp"
+description="allow rdp traffic"
+
+ingress{
+from_port=3389 # by default, windows server listens to TCP port 3389 for RDP
+to_port=3389
+protocol="tcp"
+
+cidr_blocks=["0.0.0.0/0"]
+}
+}
+
+
+
+------------------------------
+- Let's add tag to our EC2 (Edit file as per below mentioned)
+
+  ami="<win 2019 ami id in eu-west-3 region>"
+tags={
+Name="Windows-instance"
+}
+  instance_type="t2.micro"
+
+
+
+----------------------------------------------
+
+
+
+- vi linux-instance-creation.tf
+
+provider "aws"{
+profile="terraform_user"
+access_key="<access key>"
+secret_key="<secret key>"
+region="ap-south-1"
+}
+resource "aws_instance" "example"{
+ami="<linux ami id in ap-south-1 region>"
+tags={
+Name="Linux-instance"
+}
+instance_type="t2.micro"
+key_name="terraform-linux"
+security_groups=["${aws_security_group.allow_ssh.name}"]
+}
+resource "aws_security_group" "allow_ssh"{
+name="allow_ssh"
+description="allow ssh traffic"
+
+ingress{
+from_port=22 # by default, linux server listens to TCP port 22 for SSH
+to_port=22
+protocol="tcp"
+
+cidr_blocks=["0.0.0.0/0"]
+}
+}
+
+
+----------------------------------------------
+          Let's create S3 bucket
+
+- vi s3-bucket-creation.tf
+
+provider "aws"{
+profile="terraform_user"
+access_key="<access key>"
+secret_key="<secret key>"
+region="ap-south-1"
+}
+
+resource "aws_s3_bucket" "bucket"{
+bucket="<any bucket name(my-terraform-test-bucket>"
+acl="private"
+tags={
+Name="my bucket"
+Environment="Test"
+}
+}

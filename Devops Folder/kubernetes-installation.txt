@@ -1,0 +1,105 @@
+---------------------------------------- installation for master node--------------------------------------------------------------------------
+ yum install docker -y
+    2  service docker start
+    3  yum repolist
+    4  sytemctl docker start
+    5  systemctl docker start
+    6  cat <<EOF | sudo tee /etc/yum.repos.d/kubernetes.repo
+[kubernetes]
+name=Kubernetes
+baseurl=https://pkgs.k8s.io/core:/stable:/v1.29/rpm/
+enabled=1
+gpgcheck=1
+gpgkey=https://pkgs.k8s.io/core:/stable:/v1.29/rpm/repodata/repomd.xml.key
+exclude=kubelet kubeadm kubectl cri-tools kubernetes-cni
+EOF
+
+    7  sudo yum install -y kubelet kubeadm kubectl --disableexcludes=kubernetes
+    8  sudo systemctl enable --now kubelet
+    9  yum repolist
+   10  kubeadm init
+   11   mkdir -p $HOME/.kube
+   12   sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
+   13   sudo chown $(id -u):$(id -g) $HOME/.kube/config
+   14    export KUBECONFIG=/etc/kubernetes/admin.conf
+   15  kubectl get nodes
+   16  kubectl get nodes
+   17  curl https://raw.githubusercontent.com/projectcalico/calico/v3.27.2/manifests/calico.yaml -O
+   18  kubectl apply -f calico.yaml
+   19  kubectl get nodes
+   20  curl https://raw.githubusercontent.com/projectcalico/calico/v3.27.2/manifests/calico-etcd.yaml -o calico.yaml
+   21  kubectl apply -f calico.yaml
+   22  curl https://raw.githubusercontent.com/projectcalico/calico/v3.27.2/manifests/calico.yaml -O
+   23  kubectl apply -f calico.yaml
+   24  kubectl get pods -A
+   25  service kubelet  restart
+   26  service kubectl  restart
+   27  kubectl get pods -A
+   28  kubectl get nodes
+   29  systemctl status kube-apiserver
+   30  service status kube-apiserver
+   31  kubectl config view
+   32  kubectl get componentstatuses
+   33  curl https://172.31.7.224:6443/version --insecure
+   34  kubectl get nodes
+   35  systemctl status kube-controller-manager
+   36  service status kube-controller-manager
+   37  curl https://raw.githubusercontent.com/projectcalico/calico/v3.27.2/manifests/calico.yaml -O
+   38  kubectl apply -f calico.yaml
+   39  kubectl get nodes
+   40  kubectl get pods -A
+   41  history
+   42  service kubelet restart
+   43  service kubectl restart
+   44  kubectl get pods -A
+   45  kubectl get nodes
+   46  systemctl status kube-apiserver
+   47  sudo systemctl restart kube-apiserver
+   48  sudo service restart kube-apiserver
+   49  curl https://172.31.7.224:6443/version --insecure
+   50  kubectl get nodes
+   51  kubectl get pods -A
+   52  sudo i
+   53  sudo -i
+   54   strace -eopenat kubectl version
+   55  kubectl get nodes
+   56  sudo -i
+   57  kubectl get nodes
+   58  kubectl get pods -A
+   59  service kubelet stop
+   60  service kubelet start
+   61  service kubectl stop
+   62  service kubectl start
+   63  kubectl get nodes
+   64  curl https://raw.githubusercontent.com/projectcalico/calico/v3.27.2/manifests/calico.yaml -O
+   65  kubectl apply -f calico.yaml
+   66  kubectl get nodes 
+   67  kubectl get pods -A
+   68  curl https://raw.githubusercontent.com/projectcalico/calico/v3.27.2/manifests/calico.yaml -O
+   69  kubectl apply -f calico.yaml
+   70  kubectl get pods -A
+   71  history
+------------------------------------------------------------------------------- installation for worker node------------------------------------------------
+1  yum install docker -y
+    2  service docker start
+    3  systemctl docker start
+    4  service docker status
+    5  cat <<EOF | sudo tee /etc/yum.repos.d/kubernetes.repo
+[kubernetes]
+name=Kubernetes
+baseurl=https://pkgs.k8s.io/core:/stable:/v1.29/rpm/
+enabled=1
+gpgcheck=1
+gpgkey=https://pkgs.k8s.io/core:/stable:/v1.29/rpm/repodata/repomd.xml.key
+exclude=kubelet kubeadm kubectl cri-tools kubernetes-cni
+EOF
+
+    6  sudo yum install -y kubelet kubeadm kubectl --disableexcludes=kubernetes
+    7  sudo systemctl enable --now kubelet
+    8  yum repolist
+    9  kubeadm join 172.31.7.224:6443 --token vzo0np.237mp3vnknc8vrqq         --discovery-token-ca-cert-hash sha256:f80acf6992dcd8c2ca0be39733fe1cbcfade3813d51bb43d5d1bebddd7a9cf5a 
+   10  kubectl get nodes
+   11  kubectl apply -f calico.yaml
+   12  kubectl get nodes
+   13  kubectl get nodes
+   14  history
