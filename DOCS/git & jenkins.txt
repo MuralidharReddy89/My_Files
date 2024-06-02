@@ -1,0 +1,169 @@
+git init: Initializes a new Git repository in the current directory.
+
+git clone [url]: Clones an existing repository from a specified URL.
+
+git add [file]: Adds a file or directory to the staging area, preparing it to be committed.
+
+git commit -m "[message]": Records changes to the repository with a descriptive message.
+
+git status: Displays the status of the working directory and staging area.
+
+git diff: Shows the differences between the working directory and the staging area.
+
+git diff --staged: Shows the differences between the staging area and the last commit.
+
+git log: Displays a list of commits in reverse chronological order.
+
+git branch: Lists all local branches in the repository.
+
+git branch [branch_name]: Creates a new branch with the specified name.
+
+git checkout [branch_name]: Switches to the specified branch.
+
+git merge [branch_name]: Merges the specified branch into the current branch.
+
+git remote: Displays a list of remote repositories.
+
+git remote add [name] [url]: Adds a new remote repository with the specified name and URL.
+
+git pull [remote] [branch]: Fetches changes from a remote repository and merges them into the current branch.
+
+git push [remote] [branch]: Pushes local changes to a remote repository.
+
+git reset [file]: Unstages the specified file, keeping the changes in the working directory.
+
+git reset --hard: Resets the working directory and staging area to match the last commit.
+
+git checkout -- [file]: Discards changes in the working directory for the specified file, reverting it to the last commit.
+
+git rm [file]: Removes the specified file from the working directory and staging area.
+
+
+
+----------------------------------------------------------jenkins-CICD-pipeline------------------------------------------------------------------------
+
+Devops
+    |
+    |=> tool-1=>jenkins
+devops -- cost to company , automation , tools, leadership skills,cloud.
+
+
+devops= development + testing + supporting    |
+ tools
+    |
+Jenkins
+                             new product --> fast delivery                 build            Docker
+                                                                                                     |        |   |
+               1.  person book a train ticket --->> engine+s1+s2+s3+s4+a1+a2+gd=  > starting point of pipeline 
+                                                                                           |        |                         |
+				         code  security            ansible
+				     quality
+
+              2. we have to add extra tools for faster delivery
+
+              3. we introduce slave it will relive extra load engine  - master will distribute the work to slave or worker.
+              
+
+             4. jenkins file  ==>> it will access to enter the pipeline 
+                  - we have to write a pipeline script
+
+            5. integration of pipeline- we go to  manage jenkins -> configure --> tool integration or integrate
+                Advance devops enginer well develop a automate integration 
+    
+            6.  destination  means devployment  AWS-severs , google-cloud , azure , on primese[no cloud]
+                                                                         |                     |
+                                                                      { |--- --------- cloud    -------- ------- }
+                                                          ------------------------     
+                                                          |           |          |          |
+                                                         dev     QA      stage  product
+  
+                 1-dev means developments team 
+                 2-QA for testing teams
+                 3-stage for clients
+                 4-product for users
+
+
+     CI - continous integration  -- it is faster releases 
+                                                  -- strong couple or plugin with GitHub 
+
+     CD - contionus deployment
+
+
+plugins ==> it will enchance the feature or increase the power
+
+
+---------------------------------------------------------------------------------- jenkins advance concepts-------------------------------------------------------------------------------
+
+
+
+developer will push the whatever code to github that github accout strongly coupled with jenkins through trigger webhoofk
+
+declearative pipeline
+agent- sever -it  be a virtual machine 
+stages--|
+           stage1 stage 2  ------ stage n
+            |
+      steps 
+         |
+  inside steps we write the shell script code.
+
+through inputs we can run -- by using parameters
+
+syntax: parameters{
+	string (name : '   '     description: '   ')
+	choice(name: '    ' ,  choice : [  ] , description: '  ')
+}
+
+
+
+---------------------------------------------------------------------- jenkins(master/slaves)------------------------------------------------------------------
+
+
+master will control the slaves
+if any heavy load that load will shift to slaves it help to decrease the load.
+  
+
+-------------------------------------------------------------------- jenkins project for our resume upgrade -------------------------------------------------
+name : jenkins CI pipeline project 
+
+creating three different account
+1.AWS account
+2.GitHub account
+3.Docker Hub account
+
+step1- createing a T2.medium ubuntu os ec2 instance in AWS 
+
+
+------------------------------------------------------------------ kubernetes---------------------------------------------------------------------------------------------
+kubernetes Architecture:  a kubernetes cluster consists of a set of workers machines , called nodes, that run containerized application. every cluster 
+has atleast one worker node 
+the worker nodes host the pods that are the components of the application workload. the control pane manages the worker nodes and the pods in the cluster.
+master node componenets:
+developer interact api server through kubectl (kubectl=> API SERVER)
+control manager is the brain of entier system(control manager)
+
+scheduler: it will decide which worker node pod will deploy
+
+etcd: it is database 
+
+worker node components:
+kubelet: whatever data taken from worker node that data will send to api server that will sends scheduler.
+pod : pod is a smallest unit in the worker node
+container runtime
+kube-proxy: to give security to our application
+--------------------------------------------------- manifest file components--------------------------------------------------------------------------------
+apiversion: calling function from kuberbetes
+kind
+metadata
+spec
+file name : nginx-deployment.yml
+
+what is kubernetes ?
+it is a system software
+kubernetes is a open source container orchestration system for automation software deployment , scaling and management.
+google originally designed kubernetes 
+
+======================================================================================================
+link
+https://xhamster.desi/videos/hot-and-sexy-desi-women-homemade-sex-videos-xhcRE1J
+======================================================================================================

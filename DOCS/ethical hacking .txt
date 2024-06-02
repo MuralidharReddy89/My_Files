@@ -1,0 +1,92 @@
+                                                     ethical hacker  concept
+we have know the network 
+when two device build a communication then there is network
+wire network-- ethernet(eth0) and wireless network -- wifi
+share data through network
+remote connection and communication
+sharing resources such as printers , fax and datsbases
+sensors - monitors
+client - servers
+data stored in database. if i request is send database i want particular data that database will response will display
+multifacility working together
+costafective less - means less price 
+reliability
+networking components:
+1.APP(mobile,computer,laptop) - PROTOCAl - it is a set of rules
+                                                    - network as some rules
+common language of app is protocal
+2. NIC HOST PROTOCAL
+
+-------------------
+example 
+instagram- message , videocall, reels , comments, likes,followers
+
+Transmission media
+
+CLIENT / SERVER -  2 step of understanding
+web browser - chrome - A browser is a piece of software that retrieves and display web pages 
+a search engine is a website that hepls people find web pages from other websites.
+peer - peer 
+ no dedicated server
+
+SOURCE - DESTINATION
+(HOST1)    (HOST2) {transmission}/ sending
+
+EXAMPLE
+ banaganpalli - yaganti
+
+TRANSMISSION TYPES
+1 --  Unicast => direct device to device 
+2 -- Multicast => one to some or group - host avaliable
+3 -- Broadcast => one to all 
+
+BOUNDED AND UNBOUNDED NETWORKS
+BOUNDED
+ 1 - Wired
+        uses metalic and optical
+        limits bundaries
+UNBOUNDED
+ 1 - Wired 
+         radio waves cable
+         unlimited
+
+
+                                                       1.  Network scope
+
+1) LAN   - local area network(limited)
+               - geographically limited network - buildings, floor,rooms,campus
+               - equipment-(own)
+                 wired - wireless , segments = using optical fibers
+                ( cpmputer resources) 
+                 OSI MODEL - open system interconnection(OSI LAYER)
+2)WLAN - (wireless local area network)
+                 - lan based technology , wireless
+                 (wifi)
+                 adds security level more and more
+                 risky risky.
+                extension of lan . larger lan
+3)WAN - wide area network.
+              - multiple lans . isp(internet service provider) or telcommunications
+              - the internet is the ultimate wan
+              - ppp
+4)OTHERS...
+                 PAN- personal area network
+                          hostpot, bluetooth , iot devices ,surroundings
+                MAN- metropolitian area network .
+                         limited(fibers)
+                CAN-compus area network
+                    local environments . limited geographical 
+
+
+                                                           2.Network Addressing
+
+
+-host anmes
+-netbios
+-ip address
+-MAC
+       network address :
+                - one device to another device .communication build
+                - different services on same device or another service
+        DNS- domain name system (or) service  gan-(global area network)
+hostname : friendly name  
